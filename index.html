@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROЖИВАЯ — Онлайн-интенсив Ольги Аксёновой · 27–28 июня</title>
+  <meta name="description" content="Онлайн-интенсив «PROЖИВАЯ». Научись проживать сильные чувства за 8 минут — без боли и без психолога рядом. 27–28 июня." />
+  <meta property="og:title" content="PROЖИВАЯ — возвращение к себе | 27–28 июня">
+  <meta property="og:description" content="Можно ли прожить сильные чувства за 8 минут — без боли и без психолога рядом?">
+  <meta property="og:image" content="autor.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#FDFBF7;--bg-soft:#F5F0E8;--bg-mint:#EDF5F0;
+      --sage:#8FAF96;--sage-dk:#6E9178;--rose:#C9A89A;--rose-lt:#E8D4CC;
+      --text:#3D3530;--muted:#7A6E68;--light:#A89E98;--line:#E0D8D0;--white:#fff;
+      --serif:'Cormorant Garamond',Georgia,serif;--sans:'Raleway',sans-serif;--r:40px;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--bg);color:var(--text);font-size:19px;line-height:1.75;font-weight:400}
+    h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15}
+    h1{font-size:clamp(3rem,7vw,5.5rem);font-weight:700}
+    h2{font-size:clamp(2.1rem,4vw,3.2rem)}
+    h3{font-size:clamp(1.35rem,2.5vw,1.75rem)}
+    p{margin-bottom:.8em}p:last-child{margin-bottom:0}
+    .wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+    .wrap--sm{max-width:720px;margin:0 auto;padding:0 28px}
+    section{padding:80px 20px}
+    hr{height:1px;background:linear-gradient(to right,transparent,var(--line),transparent);border:none;margin:0}
+
+    /* Buttons */
+    .btn{display:inline-block;padding:16px 40px;border-radius:var(--r);font-family:var(--sans);font-weight:600;font-size:1rem;text-decoration:none;letter-spacing:.04em;transition:all .3s;cursor:pointer;border:none}
+    .btn--sage{background:var(--sage);color:var(--white)}
+    .btn--sage:hover{background:var(--sage-dk);transform:translateY(-2px);box-shadow:0 8px 24px rgba(110,145,120,.3)}
+    .btn--rose{background:var(--rose);color:var(--white)}
+    .btn--rose:hover{background:#b8978a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(180,140,130,.3)}
+    .btn--big{padding:20px 52px;font-size:1.1rem}
+
+    /* Fade */
+    .fade{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+    .fade.on{opacity:1;transform:none}
+
+    /* HEADER */
+    .header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(253,251,247,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav-left{display:flex;align-items:center;gap:16px}
+    .logo{font-family:var(--serif);font-size:1.45rem;color:var(--text);text-decoration:none;font-style:italic;font-weight:700}
+    .logo strong{font-weight:900}
+    .date-chip{font-size:1rem;color:var(--muted);background:var(--bg-soft);border-radius:20px;padding:6px 18px;font-weight:500;white-space:nowrap}
+    .nav{display:flex;gap:28px;align-items:center}
+    .nav a{font-size:1rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .nav a:hover{color:var(--sage-dk)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;z-index:1001}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s}
+
+    /* HERO */
+    #hero{min-height:100vh;padding-top:90px;padding-left:60px;display:flex;align-items:center;background-image:url('hero.jpg');background-size:65%;background-position:right 10%;background-repeat:no-repeat;position:relative}
+    #hero .wrap{margin-left:0}
+    #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(253,251,247,.98) 42%,rgba(253,251,247,.7) 65%,rgba(253,251,247,.08) 100%);z-index:0}
+    .hero-inner{position:relative;z-index:1;max-width:580px}
+    .hero-label{font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dk);font-weight:600;margin-bottom:18px;display:block}
+    .hero-title{font-family:var(--serif);font-size:clamp(3.5rem,8vw,6rem);font-weight:900;line-height:1;margin-bottom:24px;color:var(--text)}
+    .hero-hook{font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.65rem);font-style:italic;color:var(--muted);line-height:1.5;margin-bottom:36px;max-width:500px}
+    .hero-hint{font-size:.9rem;color:var(--light);margin-top:14px;display:block;letter-spacing:.03em}
+
+    /* Section labels */
+    .s-label{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dk);font-weight:600;margin-bottom:10px;display:block;text-align:center}
+
+    /* PAINS */
+    #recognize{background:var(--bg-soft);padding:80px 20px}
+    .pains{display:flex;flex-direction:column;align-items:center;max-width:620px;margin:0 auto}
+    .pain{padding:18px 0;border-bottom:1px solid var(--line);width:100%;text-align:center}
+    .pain:last-child{border-bottom:none}
+    .pain__title{font-family:var(--serif);font-size:clamp(1rem,2.2vw,1.3rem);color:var(--muted);font-style:italic;line-height:1.4;margin-bottom:8px;display:block}
+    .pain__desire{font-family:var(--serif);font-size:clamp(1.4rem,3vw,1.9rem);color:var(--sage-dk);font-style:italic;line-height:1.3;display:block}
+
+    /* HOOK BANNER */
+    .hook-banner{background:var(--text);color:var(--white);padding:64px 28px;text-align:center}
+    .hook-banner h2{font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:300;font-style:italic;line-height:1.45;color:rgba(255,255,255,.9);max-width:760px;margin:0 auto 32px}
+    .hook-banner h2 strong{font-weight:600;font-style:normal;color:var(--white)}
+
+    /* WANTS */
+    #results{background:var(--bg-mint);padding:52px 20px}
+    .wants-title{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3.2rem);font-weight:400;text-align:center;color:var(--text);margin-bottom:52px;line-height:1.2}
+    .wants-title em{color:var(--sage-dk);font-style:italic}
+    .wants-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px;margin:0 auto 56px}
+    .want-card{background:var(--white);border-radius:20px;padding:30px 22px 28px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;text-align:center;transition:transform .25s,box-shadow .25s}
+    .want-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(100,80,60,.1)}
+    .want-dot{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--sage),var(--rose-lt));display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px;flex-shrink:0}
+    .want-text{font-family:var(--serif);font-size:1.08rem;color:var(--text);line-height:1.55;font-style:italic}
+    .wants-promise{background:var(--text);border-radius:24px;padding:44px 48px;max-width:760px;margin:0 auto;text-align:center}
+    .wants-promise p{font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.45rem);color:rgba(255,255,255,.9);font-style:italic;line-height:1.65;margin:0}
+    .wants-promise strong{font-style:normal;font-weight:600;color:var(--white)}
+
+    /* ABOUT */
+    #about{background:var(--bg)}
+    .about-inner{display:grid;grid-template-columns:340px 1fr;gap:64px;align-items:center}
+    .about-img{border-radius:22px;overflow:hidden;box-shadow:0 20px 56px rgba(100,80,60,.13)}
+    .about-img img{width:100%;height:460px;object-fit:cover;display:block;filter:sepia(.1) saturate(.9) brightness(1.05)}
+    .about-label{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);font-weight:600;margin-bottom:12px;display:block}
+    .about-text h2{margin-bottom:22px}
+    .about-text p{font-family:var(--serif);font-style:italic;font-size:1.1rem;line-height:1.75;color:var(--muted);margin-bottom:14px}
+    .signature{font-family:var(--serif);font-size:1.55rem;font-style:italic;color:var(--sage-dk);margin-top:22px;display:block}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .tag{background:var(--bg-soft);border:1px solid var(--line);border-radius:20px;padding:5px 16px;font-size:.85rem;color:var(--muted)}
+
+    /* REVIEWS */
+    #reviews{background:var(--bg-mint)}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+    .review{background:var(--white);border-radius:18px;padding:30px 24px;border:1px solid var(--line)}
+    .review--ft{background:linear-gradient(135deg,var(--bg-mint),#F5FBF8);border-color:var(--sage)}
+    .review__title{font-family:var(--serif);font-size:1.1rem;color:var(--text);margin-bottom:12px;font-style:italic;font-weight:600;line-height:1.4}
+    .review__text{font-size:.92rem;color:var(--muted);line-height:1.65}
+    .review__meta{font-size:.8rem;color:var(--light);margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+
+    /* METHOD */
+    #method{background:#EDF2EC;padding:64px 20px}
+    .method-inner{max-width:800px;margin:0 auto;text-align:center}
+    .method-inner h2{margin-bottom:14px}
+    .method-inner>p{color:var(--muted);font-size:1.05rem;line-height:1.75;max-width:580px;margin:0 auto}
+    .method-steps{display:flex;flex-direction:column;gap:14px;margin-top:40px;max-width:660px;margin-left:auto;margin-right:auto}
+    .method-step{background:var(--white);border-radius:16px;padding:22px 24px;border:1px solid var(--line);display:flex;align-items:flex-start;gap:20px;text-align:left}
+    .step-num{font-family:var(--serif);font-size:2rem;color:var(--rose-lt);font-style:italic;flex-shrink:0;line-height:1;width:32px;text-align:center}
+    .step-title{font-family:var(--serif);font-size:1.1rem;color:var(--text);margin-bottom:4px;font-weight:400}
+    .step-text{font-size:.92rem;color:var(--muted);line-height:1.55}
+
+    /* PROGRAM */
+    #program{background:var(--bg-soft)}
+    .program-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+    .program-day{background:var(--white);border-radius:18px;padding:32px 28px;border:1px solid var(--line)}
+    .day-title{font-family:var(--serif);font-size:1.45rem;color:var(--sage-dk);margin-bottom:4px;font-weight:400}
+    .day-sub{font-size:.9rem;color:var(--light);margin-bottom:22px}
+    .day-points{list-style:none;padding:0}
+    .day-points li{padding:10px 0;border-bottom:1px solid var(--line);font-size:.97rem;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+    .day-points li:last-child{border-bottom:none}
+    .day-points li::before{content:'✦';color:var(--sage);font-size:.65rem;flex-shrink:0;margin-top:6px}
+
+    /* PRICING */
+    #pricing{background:var(--bg)}
+    .urgency{background:var(--rose-lt);border-radius:12px;padding:13px 20px;text-align:center;margin-bottom:28px;font-size:.95rem;color:var(--text)}
+    .urgency strong{color:var(--sage-dk)}
+    .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .price-card{background:var(--white);border-radius:22px;padding:36px 32px;border:1px solid var(--line);display:flex;flex-direction:column}
+    .price-card--ft{border-color:var(--rose);background:linear-gradient(160deg,#FDF8F5,var(--white));position:relative}
+    .price-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--rose);color:var(--white);font-size:.76rem;padding:4px 18px;border-radius:20px;font-weight:500;white-space:nowrap}
+    .price-name{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--light);font-weight:500;margin-bottom:8px}
+    .price-num{font-family:var(--serif);font-size:2.6rem;color:var(--text);line-height:1;margin-bottom:4px}
+    .price-note{font-size:.83rem;color:var(--light);margin-bottom:24px}
+    .price-list{list-style:none;padding:0;flex:1;margin-bottom:24px}
+    .price-list li{display:flex;gap:9px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);font-size:.93rem;color:var(--muted)}
+    .price-list li:last-child{border-bottom:none}
+    .price-list li::before{content:'✦';color:var(--sage);font-size:.65rem;flex-shrink:0;margin-top:5px}
+    .qr-block{text-align:center;margin-bottom:16px}
+    .qr-block img{width:130px;height:130px;border-radius:10px;border:1px solid var(--line);padding:5px;background:#fff}
+    .qr-label{font-size:.8rem;color:var(--muted);display:block;margin-top:6px}
+
+    /* FORM */
+    #form{background:var(--bg-soft)}
+    .form-wrap{max-width:520px;margin:0 auto;text-align:center}
+    .form-wrap h2{margin-bottom:8px}
+    .form-wrap>p{color:var(--muted);margin-bottom:20px;font-size:1rem}
+    .contacts-box{background:var(--bg-mint);border-radius:14px;padding:22px 24px;margin-bottom:26px;border:1px solid var(--sage)}
+    .contacts-box p{font-size:.97rem;color:var(--muted);margin-bottom:12px}
+    .contacts{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+    .contacts a{font-size:.97rem;color:var(--text);text-decoration:none;font-weight:500;transition:color .2s}
+    .contacts a:hover{color:var(--sage-dk)}
+    .cform{display:flex;flex-direction:column;gap:14px;text-align:left}
+    .fg{display:flex;flex-direction:column;gap:5px}
+    .fg label{font-size:.83rem;color:var(--muted);font-weight:500}
+    .fg input,.fg select,.fg textarea{padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--white);font-family:var(--sans);font-size:.95rem;color:var(--text);outline:none;transition:border-color .25s}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sage)}
+    .fg textarea{resize:vertical;min-height:80px}
+    .form-note{font-size:.78rem;color:var(--light);text-align:center;margin-top:8px}
+    .form-success{display:none;background:var(--bg-mint);border-radius:14px;padding:26px;color:var(--sage-dk);font-family:var(--serif);font-size:1.15rem;font-style:italic;text-align:center;margin-top:16px}
+
+    /* FOOTER */
+    footer{background:var(--text);color:rgba(255,255,255,.5);padding:38px 24px;text-align:center;font-size:.83rem}
+    footer strong{display:block;font-family:var(--serif);font-size:1.2rem;color:rgba(255,255,255,.85);font-weight:400;font-style:italic;margin-bottom:8px}
+
+    /* RESPONSIVE */
+    @media(max-width:860px){
+      section{padding:60px 20px}
+      .pains{grid-template-columns:1fr 1fr}
+      .wants-grid{grid-template-columns:repeat(2,1fr)}
+      .wants-promise{padding:36px 28px}
+      .about-inner{grid-template-columns:1fr}
+      .about-img img{height:340px}
+      .reviews-grid{grid-template-columns:1fr 1fr}
+      .method-steps{grid-template-columns:1fr}
+      .program-grid{grid-template-columns:1fr}
+      .pricing-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      h2{font-size:1.75rem}
+      .wants-grid{grid-template-columns:1fr}
+      .pains{grid-template-columns:1fr}
+      .reviews-grid{grid-template-columns:1fr}
+      .nav{display:none}
+      .nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(253,251,247,.97);backdrop-filter:blur(14px);padding:24px;gap:20px;border-bottom:1px solid var(--line)}
+      .hamburger{display:flex}
+      .date-chip{display:none}
+      #hero{background-position:center 50%;background-size:160%;padding-left:20px;padding-right:20px;padding-bottom:40px;align-items:stretch;flex-direction:column;justify-content:space-between}
+      #hero::before{background:linear-gradient(to bottom,rgba(253,251,247,.3) 0%,rgba(253,251,247,.5) 40%,rgba(253,251,247,.93) 62%,rgba(253,251,247,1) 75%)}
+      #hero .wrap{display:flex;flex-direction:column;justify-content:space-between;flex:1;padding-top:16px}
+      .hero-dates{position:relative;z-index:2}
+      .hero-inner{max-width:100%}
+      .hero-title{font-size:clamp(2.8rem,12vw,3.8rem);margin-top:0}
+      body{font-size:18px}
+      h2{font-size:1.9rem}
+      .pain__desire{font-size:1.4rem !important}
+      .pain__title{font-size:1.1rem}
+      .btn--big{width:100%;text-align:center;padding:18px 32px}
+      .hook-banner{padding:44px 20px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="nav-left">
+    <a href="#hero" class="logo"><strong>PRO</strong>Живая</a>
+    <div class="date-chip">27–28 июня</div>
+  </div>
+  <button class="hamburger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  <nav class="nav" id="nav">
+    <a href="#about">Об авторе</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#program">Программа</a>
+    <a href="#pricing">Участие</a>
+  </nav>
+  <a href="#form" class="btn btn--sage" style="padding:10px 24px;font-size:.92rem">Записаться</a>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-dates">
+      <span style="font-family:var(--serif);font-size:clamp(1.4rem,2.8vw,2rem);font-weight:700;color:var(--text);display:block;margin-bottom:4px;line-height:1">27–28 июня</span>
+      <span style="font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dk);font-weight:600;display:block">Онлайн-интенсив</span>
+    </div>
+    <div class="hero-inner fade">
+      <h1 class="hero-title">PROЖИВАЯ</h1>
+      <p style="font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.3rem);font-weight:600;color:var(--text);line-height:1.6;margin-bottom:32px;max-width:480px">Научись закрывать свои потребности самостоятельно и перестань зависеть от других людей и обстоятельств</p>
+      <a href="#form" class="btn btn--sage" style="padding:13px 32px;font-size:.95rem">Хочу на интенсив →</a>
+      <span class="hero-hint" style="color:var(--text);font-weight:500;font-size:.95rem;background:rgba(255,255,255,.7);display:inline-block;padding:8px 18px;border-radius:20px;margin-top:16px;backdrop-filter:blur(6px)">27–28 июня · онлайн · 4 часа в день</span>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ЖЕЛАНИЯ -->
+<section id="results" style="background:var(--bg)">
+  <div class="wrap--sm">
+    <div class="fade" style="text-align:center;margin-bottom:16px">
+      <h2 style="font-family:var(--serif);font-size:clamp(2rem,4.5vw,3rem);color:var(--text)">Чего ты хочешь <em style="color:var(--sage-dk);font-style:italic">на самом деле?</em></h2>
+    </div>
+    <div class="pains fade">
+      <div class="pain">
+        <span class="pain__desire" style="color:var(--text);font-size:clamp(1.3rem,2.8vw,1.75rem)">Поверить в себя и выйти из замкнутого круга</span>
+      </div>
+      <div class="pain">
+        <span class="pain__desire" style="color:var(--text);font-size:clamp(1.3rem,2.8vw,1.75rem)">Ощутить себя живой, ценной и нужной</span>
+      </div>
+      <div class="pain">
+        <span class="pain__desire" style="color:var(--text);font-size:clamp(1.3rem,2.8vw,1.75rem)">Жить радостно и в удовольствие</span>
+      </div>
+      <div class="pain">
+        <span class="pain__desire" style="color:var(--text);font-size:clamp(1.3rem,2.8vw,1.75rem)">Почувствовать близость с родными</span>
+      </div>
+      <div class="pain">
+        <span class="pain__desire" style="color:var(--text);font-size:clamp(1.3rem,2.8vw,1.75rem)">Вернуть энергию, интерес и начать делать</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOOK BANNER -->
+<div class="hook-banner">
+  <div class="wrap">
+    <h2>Всего за 2 дня получи инструмент, который работает без психологов.<br><strong>Научись управлять своей жизнью через принятие состояний и закрытие дефицитов.</strong></h2>
+    <p style="font-family:var(--serif);font-size:1.4rem;font-style:italic;color:rgba(255,255,255,.75);margin-bottom:32px">Доказано практикой</p>
+    <a href="#form" class="btn btn--sage btn--big">Хочу на интенсив →</a>
+  </div>
+</div>
+
+<hr>
+
+<!-- ОБ АВТОРЕ -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-inner fade">
+      <div class="about-img">
+        <img src="autor.webp" alt="Ольга Аксёнова" loading="lazy" />
+      </div>
+      <div class="about-text">
+        <span class="about-label">Об авторе</span>
+        <h2>Ольга Аксёнова</h2>
+        <p>Психолог, поэт, художник, мама. Более 10 лет помогаю людям возвращаться к себе.</p>
+        <p>Этот метод родился из моего личного кризиса — потери мужа, бизнеса, здоровья. Я прошла через это сама — и нашла путь обратно.</p>
+        <p>Веду мягко и бережно. Моя задача — дать инструмент, который работает без меня: в любой момент, в любой ситуации, для любого человека.</p>
+        <span class="signature">С любовью, Ольга</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ОТЗЫВЫ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="fade" style="text-align:center">
+      <span class="s-label">Отзывы</span>
+      <h2>Они уже научились и практикуют</h2>
+    </div>
+    <div class="reviews-grid fade">
+      <div class="review review--ft">
+        <div class="review__title">«После 20 лет терапии — за 6 месяцев жизнь изменилась кардинально»</div>
+        <div class="review__text">Реакции поменялись, отношения с мужем изменились, работа несёт удовольствие. Уникальная женщина с уникальным методом.</div>
+        <div class="review__meta">Кризис в отношениях, внутреннее напряжение</div>
+      </div>
+      <div class="review">
+        <div class="review__title">«Была в шаге от антидепрессантов. Через 4 месяца — другой человек»</div>
+        <div class="review__text">Ольга помогла увидеть, где я себя предавала. Тревоги стало меньше, перестала срываться на сына.</div>
+        <div class="review__meta">Депрессия, истощение</div>
+      </div>
+      <div class="review">
+        <div class="review__title">«Я начала ЧУВСТВОВАТЬ»</div>
+        <div class="review__text">Появилось спокойное реагирование на болевые ситуации. За Олину теплоту — отдельная благодарность.</div>
+        <div class="review__meta">Детские страхи, потеря, сложные отношения</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:44px" class="fade">
+      <a href="#form" class="btn btn--rose btn--big">Хочу на интенсив →</a>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- МЕТОД -->
+<section id="method" style="background:#EDF2EC;padding:64px 20px">
+  <div class="method-inner fade">
+    <span class="s-label">Метод</span>
+    <h2>Как работает PROЖИВАЯ</h2>
+    <p>Не разговоры и не анализ. Работаем мягко, поэтапно, безопасно.</p>
+    <div class="method-steps">
+      <div class="method-step">
+        <span class="step-num">1</span>
+        <div class="step-title">Встречаешь чувство</div>
+        <div class="step-text">Не избегаешь, не погружаешься — просто встречаешь, распознаёшь, даёшь телом пройти волне.</div>
+      </div>
+      <div class="method-step">
+        <span class="step-num">2</span>
+        <div class="step-title">Проходишь слои</div>
+        <div class="step-text">Под верхним слоем чувств — страх. Под страхом — боль. Под болью — потребность.</div>
+      </div>
+      <div class="method-step">
+        <span class="step-num">3</span>
+        <div class="step-title">Закрываешь потребность</div>
+        <div class="step-text">Самостоятельно. Без психолога. То, что исцеляет и наполняет. Даёт ресурс и опору на себя.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ПРОГРАММА -->
+<section id="program">
+  <div class="wrap">
+    <div class="fade" style="text-align:center">
+      <span class="s-label">Программа</span>
+      <h2>Два дня — живой опыт</h2>
+    </div>
+    <div class="program-grid fade">
+      <div class="program-day">
+        <div class="day-title">День 1 — «Встреча с собой»</div>
+        <div class="day-sub">27 июня · 4 часа онлайн</div>
+        <ul class="day-points">
+          <li>Практика молчания и первый контакт с собой</li>
+          <li>Откуда берётся тревога, апатия и пустота</li>
+          <li>Полная карта метода — 7 шагов</li>
+          <li>Живая демонстрация прямо на интенсиве</li>
+        </ul>
+      </div>
+      <div class="program-day">
+        <div class="day-title">День 2 — «Я умею»</div>
+        <div class="day-sub">28 июня · 4 часа онлайн</div>
+        <ul class="day-points">
+          <li>Проходишь цикл самостоятельно — своё чувство</li>
+          <li>Находишь свою потребность и закрываешь её</li>
+          <li>Как применять метод каждый день (7–10 минут)</li>
+          <li>Уходишь с ощущением: я могу сама</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- УЧАСТИЕ -->
+<section id="pricing">
+  <div class="wrap--sm">
+    <div class="fade" style="text-align:center;margin-bottom:32px">
+      <span class="s-label">Участие</span>
+      <h2>Выбери свой формат</h2>
+    </div>
+    <div class="urgency fade">Ранняя цена действует <strong>до 20 июня 2026</strong> — после стоимость вырастет</div>
+    <div class="pricing-grid fade">
+      <div class="price-card">
+        <div class="price-name">Знакомство с практикой</div>
+        <div class="price-num">10 000 ₽</div>
+        <div class="price-note">после 20 июня → 15 000 ₽</div>
+        <ul class="price-list">
+          <li>2 дня интенсива (27–28 июня, 4 часа в день)</li>
+          <li>Живая работа с Ольгой в группе</li>
+          <li>Запись обоих дней на 30 дней</li>
+          <li>Чат поддержки 1 месяц</li>
+          <li>4 еженедельных практикума</li>
+        </ul>
+        <div class="qr-block">
+          <img src="QR_1.jpg" alt="QR оплата 10 000 ₽" />
+          <span class="qr-label">Оплата через СБП · 10 000 ₽</span>
+        </div>
+        <a href="#form" class="btn btn--sage">Хочу участвовать →</a>
+      </div>
+      <div class="price-card price-card--ft">
+        <span class="price-badge">Осталось 13 мест</span>
+        <div class="price-name">Глубокое погружение</div>
+        <div class="price-num">15 000 ₽</div>
+        <div class="price-note">после 20 июня → 20 000 ₽</div>
+        <ul class="price-list">
+          <li>Всё из тарифа «Знакомство»</li>
+          <li>Индивидуальная сессия с Ольгой (60 мин)</li>
+          <li>Личный разбор на практикумах</li>
+          <li>Приоритетное внимание на практике</li>
+        </ul>
+        <div class="qr-block">
+          <img src="QR_2.jpg" alt="QR оплата 15 000 ₽" />
+          <span class="qr-label">Оплата через СБП · 15 000 ₽</span>
+        </div>
+        <a href="#form" class="btn btn--rose">Хочу глубокое погружение →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- ФОРМА -->
+<section id="form">
+  <div class="wrap">
+    <div class="form-wrap fade">
+      <h2>Записаться</h2>
+      <p>Ольга напишет тебе лично и ответит на все вопросы.</p>
+      <div class="contacts-box">
+        <p>Напиши в удобном мессенджере:</p>
+        <div class="contacts">
+          <a href="https://t.me/AksOlya" target="_blank">✈️ Telegram: @AksOlya</a>
+          <a href="mailto:aksenova_ov@bk.ru">📧 aksenova_ov@bk.ru</a>
+        </div>
+      </div>
+      <form class="cform" id="cform" novalidate>
+        <div class="fg"><label for="nm">Твоё имя</label><input type="text" id="nm" placeholder="Как тебя зовут?" required /></div>
+        <div class="fg"><label for="ct">Телефон или Email</label><input type="text" id="ct" placeholder="+7 999 000 00 00 или email@mail.ru" required /></div>
+        <div class="fg"><label for="tr">Формат</label>
+          <select id="tr">
+            <option value="">— выбери тариф —</option>
+            <option value="base">Знакомство с практикой — 10 000 ₽</option>
+            <option value="deep">Глубокое погружение — 15 000 ₽</option>
+            <option value="q">Хочу сначала задать вопрос</option>
+          </select>
+        </div>
+        <div class="fg"><label for="msg">Что тебя привело? (необязательно)</label><textarea id="msg" placeholder="Можешь коротко написать, что сейчас происходит..."></textarea></div>
+        <button type="submit" class="btn btn--sage" style="width:100%;padding:16px;font-size:1rem">Отправить заявку →</button>
+        <div class="form-note">Нажимая кнопку, ты соглашаешься с обработкой персональных данных. Мы не передаём их третьим лицам.</div>
+      </form>
+      <div class="form-success" id="fsuccess">Спасибо! Ольга напишет тебе в ближайшее время 🌿</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <strong>PROЖивая</strong>
+  <p>Метод последовательного проживания чувств · Ольга Аксёнова</p>
+  <p style="margin-top:6px">© 2026 PROЖИВАЯ. Все права защищены. Сделано с душой.</p>
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const t = document.querySelector(this.getAttribute('href'));
+      if (t) {
+        e.preventDefault();
+        const hh = document.querySelector('.header').offsetHeight;
+        window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - hh - 16, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Fade-in on scroll
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+
+  // Hamburger
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+  burger.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  // Form
+  document.getElementById('cform').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nm = document.getElementById('nm').value.trim();
+    const ct = document.getElementById('ct').value.trim();
+    if (!nm) { document.getElementById('nm').style.borderColor='#C9A89A'; document.getElementById('nm').focus(); return; }
+    if (!ct) { document.getElementById('ct').style.borderColor='#C9A89A'; document.getElementById('ct').focus(); return; }
+    this.style.display = 'none';
+    document.getElementById('fsuccess').style.display = 'block';
+  });
+  ['nm','ct'].forEach(id => {
+    document.getElementById(id).addEventListener('input', function(){ this.style.borderColor=''; });
+  });
+</script>
+</body>
+</html>
