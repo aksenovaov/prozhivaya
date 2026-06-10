@@ -50,7 +50,10 @@
     .nav-left{display:flex;align-items:center;gap:16px}
     .logo{font-family:var(--serif);font-size:1.45rem;color:var(--text);text-decoration:none;font-style:italic;font-weight:700}
     .logo strong{font-weight:900}
-    .date-chip{font-size:1rem;color:var(--muted);background:var(--bg-soft);border-radius:20px;padding:6px 18px;font-weight:500;white-space:nowrap}
+    .date-chip{display:flex;flex-direction:column;align-items:flex-start;white-space:nowrap}
+    .date-chip__main{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--text);line-height:1}
+    .date-chip__sub{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sage-dk);font-weight:600}
+    .hero-dates{display:none}
     .nav{display:flex;gap:28px;align-items:center}
     .nav a{font-size:1rem;color:var(--muted);text-decoration:none;transition:color .2s}
     .nav a:hover{color:var(--sage-dk)}
@@ -203,6 +206,7 @@
       .nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(253,251,247,.97);backdrop-filter:blur(14px);padding:24px;gap:20px;border-bottom:1px solid var(--line)}
       .hamburger{display:flex}
       .date-chip{display:none}
+      .hero-dates{display:block}
       #hero{background-position:center 50%;background-size:160%;padding-left:20px;padding-right:20px;padding-bottom:40px;align-items:stretch;flex-direction:column;justify-content:space-between}
       #hero::before{background:linear-gradient(to bottom,rgba(253,251,247,.3) 0%,rgba(253,251,247,.5) 40%,rgba(253,251,247,.93) 62%,rgba(253,251,247,1) 75%)}
       #hero .wrap{display:flex;flex-direction:column;justify-content:space-between;flex:1;padding-top:16px}
@@ -224,7 +228,10 @@
 <header class="header">
   <div class="nav-left">
     <a href="#hero" class="logo"><strong>PRO</strong>Живая</a>
-    <div class="date-chip">27–28 июня</div>
+    <div class="date-chip">
+      <span class="date-chip__main">27–28 июня</span>
+      <span class="date-chip__sub">Онлайн-интенсив</span>
+    </div>
   </div>
   <button class="hamburger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
   <nav class="nav" id="nav">
@@ -469,7 +476,11 @@
           <a href="mailto:aksenova_ov@bk.ru">📧 aksenova_ov@bk.ru</a>
         </div>
       </div>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScxks4gonulMZfO2KkBgXL2NkZYLiJifbF5-iy1gnJUZ3uLGA/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0" style="border-radius:12px;margin-top:16px">Загрузка…</iframe>
+      <div style="text-align:center;padding:40px 20px;background:var(--bg-soft);border-radius:20px;margin-top:20px">
+        <p style="font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--muted);margin-bottom:28px">Заполни короткую анкету и приходи на встречу с собой</p>
+        <a href="https://forms.gle/WSqamjV2a99SiAcC8" target="_blank" class="btn btn--sage btn--big">Записаться →</a>
+        <p style="font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--muted);margin-top:28px;line-height:1.6">Если остались вопросы, напиши мне, пожалуйста, в мессенджер — я обязательно отвечу!</p>
+      </div>
     </div>
   </div>
 </section>
